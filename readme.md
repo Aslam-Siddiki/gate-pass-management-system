@@ -12,8 +12,7 @@ Helps students request campus/hostel leave digitally. Wardens can approve or rej
 
 ## 🌐 Live Demo
 
-🚀 **Live Application:** [Gate Pass Management System]
-<br>
+🚀 **Live Application:**
 https://gate-pass-management-system-oewe.onrender.com
 
 ---
