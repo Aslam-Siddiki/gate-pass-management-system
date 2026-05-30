@@ -12,9 +12,8 @@ Helps students request campus/hostel leave digitally. Wardens can approve or rej
 
 ## 🌐 Live Demo
 
-🚀 **Live Application:** [Gate Pass Management System](https://your-app-name.onrender.com)
-
-> Replace the URL above with your actual Render deployment link after deploying.
+🚀 **Live Application:** [Gate Pass Management System]
+<https://gate-pass-management-system-oewe.onrender.com>
 
 ---
 
@@ -41,8 +40,7 @@ Helps students request campus/hostel leave digitally. Wardens can approve or rej
 ## 🛠️ Tech Stack
 
 | Layer | Technologies |
-
-|---|---|
+|-------|-------------|
 | Frontend | HTML, CSS, JavaScript, EJS, Bootstrap |
 | Backend | Node.js, Express.js |
 | Database | MongoDB, Mongoose |
@@ -112,7 +110,6 @@ App runs at: `http://localhost:8080`
 > Screenshots are stored locally under `./screenshots/`. To display them on GitHub, upload them to the repo and use their raw GitHub URLs.
 
 | Page | Preview |
-
 |---|---|
 | Home Page | ![Home Page](./screenshots/homepage.png) |
 | Application Form | ![Application Form](./screenshots/application.png) |

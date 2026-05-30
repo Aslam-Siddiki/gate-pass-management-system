@@ -53,7 +53,7 @@ const store = Store.create({
     touchAfter: 24 * 3600
 });
 
-store.on("error", () => {
+store.on("error", (err) => {
     console.log("SESSION STORE ERROR", err);
 });
 
