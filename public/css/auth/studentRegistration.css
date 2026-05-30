@@ -1,0 +1,187 @@
+/* =========================
+   WRAPPER
+========================= */
+.admin-wrapper{
+    min-height:70vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+.admin-card{
+    width:100%;
+    max-width:650px;
+
+    background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(10px);
+
+    padding:40px;
+    border-radius:18px;
+
+    box-shadow:0 12px 35px rgba(0,0,0,0.25);
+}
+
+
+/* =========================
+   TITLE
+========================= */
+.admin-title{
+    text-align:center;
+    color:#6f42c1;
+    font-size:32px;
+    font-weight:800;
+    margin-bottom:30px;
+}
+
+
+/* =========================
+   FORM GRID
+========================= */
+.admin-form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+
+/* =========================
+   FORM GROUP
+========================= */
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+
+/* =========================
+   LABEL
+========================= */
+.form-label{
+    color:#6f42c1;
+    font-weight:600;
+    margin-bottom:6px;
+}
+
+h3{
+    color:#6f42c1 !important;
+}
+
+
+/* =========================
+   INPUT / SELECT
+========================= */
+.form-control,
+.form-select{
+    border:1px solid #6f42c1;
+    border-radius:8px;
+    padding:12px 14px;
+    font-size:15px;
+    transition:all 0.25s ease;
+}
+
+.form-control:hover,
+.form-select:hover{
+    border-color:#6a0dad;
+    box-shadow:0 0 0 .25rem rgba(106,13,173,.25);
+}
+
+input.form-control:focus{
+    border-color:#6a0dad;
+    box-shadow:0 0 0 .25rem rgba(106,13,173,.25);
+}
+
+/* =========================
+   BUTTON
+========================= */
+.register-btn{
+    grid-column:span 2;
+
+    margin-top:10px;
+
+    height:50px;
+
+    background:linear-gradient(90deg,#6f42c1,#7a55d8);
+    border:none;
+
+    color:white;
+    font-size:18px;
+    font-weight:700;
+
+    border-radius:8px;
+
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.register-btn:hover{
+    background:linear-gradient(90deg,#5c35b1,#6f42c1);
+    transform:translateY(-2px);
+}
+
+
+/* =========================
+   DESKTOP
+========================= */
+@media (min-width:992px){
+
+    .form-control,
+    .form-select{
+        height:50px;
+        font-size:16px;
+    }
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width:991px){
+
+    .form-control,
+    .form-select{
+        height:52px;   /* slightly bigger for touch */
+        font-size:16px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width:768px){
+
+    .admin-form{
+        grid-template-columns:1fr;
+    }
+
+    .register-btn{
+        grid-column:span 1;
+    }
+
+    .form-control,
+    .form-select{
+        height:55px;   /* bigger inputs on mobile */
+        font-size:16px;
+    }
+
+    .admin-title{
+        font-size:26px;
+    }
+
+    .admin-card{
+        padding:25px;
+    }
+
+}
+
+.form-control:hover,
+.form-select:hover{
+    border-color:#7a55d8;
+}

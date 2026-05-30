@@ -1,0 +1,46 @@
+/* Flash container */
+.alert{
+    position: fixed;
+    top: 13.15rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    max-width:460px;
+    height:60px !important;
+    width:90%;
+
+    padding:12px 16px;
+    border-radius:8px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center; /* center content */
+
+    font-size:14px;
+    font-weight:500;
+
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+    z-index:2000;
+    position: fixed;
+}
+
+/* Success message */
+.alert-success{
+    background:#6f42c1 !important;
+    color:white !important;
+    border:none;
+}
+
+/* Error message */
+.alert-danger{
+    background:#dc3545 !important;
+    color:white !important;
+    border:none;
+}
+
+/* Close button stays right */
+.alert .btn-close{
+    position: absolute;
+    right:20px;
+    filter:invert(1);
+}

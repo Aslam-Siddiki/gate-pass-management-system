@@ -1,0 +1,262 @@
+/* ========================= */
+/* MAIN PAGE */
+/* ========================= */
+
+.main{
+    text-align:center;
+    padding-top:30px;
+}
+
+
+/* ========================= */
+/* HEADING */
+/* ========================= */
+
+.head{
+    margin-top:20px;
+}
+
+.head h1{
+    margin-bottom:5px;
+    color:#7b1fa2;
+    letter-spacing:1px;
+    font-weight:700;
+}
+
+.head h2{
+    color:azure;
+    font-weight:600;
+}
+
+
+/* ========================= */
+/* DIVIDER */
+/* ========================= */
+
+hr{
+    width:60%;
+    border:none;
+    height:1px;
+    background:rgba(255,255,255,0.5);
+    margin:20px auto;
+}
+
+
+/* ========================= */
+/* DASHBOARD */
+/* ========================= */
+
+.dashboard{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+
+/* ========================= */
+/* CALENDAR */
+/* ========================= */
+
+.calendar-card{
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(12px);
+
+    padding:25px;
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,0.35);
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.2),
+    inset 0 0 10px rgba(255,255,255,0.15);
+}
+
+
+/* ========================= */
+/* TABLE */
+/* ========================= */
+
+table{
+    border-collapse:collapse;
+}
+
+th{
+    background:#4CAF50;
+    color:white;
+    padding:12px;
+    font-size:18px;
+}
+
+td{
+    border:1px solid rgba(255,255,255,0.35);
+    width:90px;
+    height:70px;
+    text-align:center;
+    font-size:18px;
+
+    background:rgba(255,255,255,0.08);
+    transition:0.2s;
+}
+
+td:hover{
+    background:rgba(255,255,255,0.25);
+}
+
+
+/* ========================= */
+/* SPECIAL DAYS */
+/* ========================= */
+
+.today{
+    background:#6a0dad !important;
+    color:white !important;
+    font-weight:bold !important;
+    border-radius:6px;
+}
+
+.sunday{
+    background:rgba(255,80,80,0.35);
+    color:#b30000;
+    font-weight:bold;
+}
+
+.monday{
+    background:rgba(80,150,255,0.25);
+    color:#003c8f;
+}
+
+
+/* ========================= */
+/* LEGEND */
+/* ========================= */
+
+#legend{
+    margin-top:15px;
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.legend-item{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:14px;
+    color:white;
+}
+
+.legend-box{
+    width:18px;
+    height:18px;
+    border-radius:4px;
+}
+
+.public{
+    background:#e53935;
+}
+
+.cse{
+    background:#4a90e2;
+}
+
+.today-box{
+    background:#6a0dad;
+}
+
+
+/* ========================= */
+/* SIDE PANEL */
+/* ========================= */
+
+.side-panel{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    width:320px;
+}
+
+
+/* ========================= */
+/* CARDS */
+/* ========================= */
+
+.card{
+    background:rgba(255,255,255,0.9);
+
+    padding:20px;
+
+    border-radius:14px;
+
+    box-shadow:
+    0 8px 18px rgba(0,0,0,0.15);
+}
+
+.card h3{
+    font-size:20px;
+    font-weight:800;
+    margin-bottom:10px;
+}
+
+.card li{
+    font-size:16px;
+    margin-bottom:8px;
+    color:#333;
+}
+
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
+
+@media (max-width:992px){
+
+    .dashboard{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .side-panel{
+        width:100%;
+        max-width:500px;
+    }
+
+    td{
+        width:70px;
+        height:60px;
+    }
+
+}
+
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width:768px){
+
+    .head h1{
+        font-size:26px;
+    }
+
+    .head h2{
+        font-size:18px;
+    }
+
+    .calendar-card{
+        padding:15px;
+    }
+
+    th{
+        font-size:14px;
+    }
+
+    td{
+        width:45px;
+        height:45px;
+        font-size:14px;
+    }
+
+}

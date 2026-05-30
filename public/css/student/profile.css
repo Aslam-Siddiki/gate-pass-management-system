@@ -1,0 +1,388 @@
+/* =========================
+PROFILE WRAPPER
+========================= */
+
+.profile-wrapper{
+    min-height:70vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+}
+
+
+/* =========================
+PROFILE CARD
+========================= */
+
+.profile-card{
+
+    width:100%;
+    max-width:420px;
+
+    background:rgba(255,255,255,0.95);
+    background-color: #6a0dad;
+    backdrop-filter:blur(10px);
+
+    padding:40px;
+    border-radius:12px;
+
+    text-align:center;
+
+    box-shadow:0 8px 25px rgba(0,0,0,0.1);
+}
+
+
+/* =========================
+USER CIRCLE
+========================= */
+
+.user-circle{
+
+    width:90px;
+    height:90px;
+
+    background-color: #dc3545;
+    color:white;
+
+    font-size:36px;
+    font-weight:600;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin:0 auto 20px auto;
+}
+
+
+/* =========================
+USER INFO
+========================= */
+
+.user-name{
+    font-size:24px;
+    margin-bottom:5px;
+    color: white;
+}
+
+.user-email{
+    color: azure;
+    font-size:15px;
+    margin-bottom:25px;
+}
+
+
+/* =========================
+BUTTONS
+========================= */
+
+.profile-actions{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.btn-change{
+    background:#ffc107;
+    color:black;
+    padding:10px 16px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:500;
+    transition:all 0.3s ease;
+}
+
+.btn-change:hover{
+    background:#e0a800;
+    transform:translateY(-2px);
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+
+.btn-delete{
+    background:#dc3545;
+    color:#fff;
+    padding:10px 16px;
+    border-radius:6px;
+    text-decoration:none;
+    border:none;
+    font-weight:500;
+    transition:all 0.3s ease;
+    cursor:pointer;
+}
+
+.btn-delete:hover{
+    background:#b02a37;
+    transform:translateY(-2px);
+    box-shadow:0 4px 12px rgba(0,0,0,0.25);
+}
+
+.disabled-btn{
+    background:#ccc;
+    color:#666;
+    padding:10px 16px;
+    border-radius:6px;
+    text-decoration:none;
+    cursor:not-allowed;
+    opacity:0.8;
+}
+
+
+/* =========================
+TABLET
+========================= */
+@media(max-width:768px){
+
+    .profile-card{
+        padding:30px;
+    }
+
+    .user-circle{
+        width:80px;
+        height:80px;
+        font-size:30px;
+    }
+
+    .user-name{
+        font-size:22px;
+    }
+
+}
+
+/* =========================
+MOBILE
+========================= */
+@media(max-width:480px){
+
+    .profile-card{
+        padding:25px;
+    }
+
+    .user-circle{
+        width:70px;
+        height:70px;
+        font-size:26px;
+    }
+
+    .user-name{
+        font-size:20px;
+    }
+
+    .user-email{
+        font-size:14px;
+    }
+
+}
+
+/*  */
+
+/* =========================
+PROFILE WRAPPER
+========================= */
+
+.profile-wrapper{
+    min-height:70vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+}
+
+
+/* =========================
+PROFILE CARD
+========================= */
+
+.profile-card{
+
+    width:100%;
+    max-width:420px;
+
+    background:rgba(255,255,255,0.95);
+    background-color:#6a0dad;
+    backdrop-filter:blur(10px);
+
+    padding:40px;
+    border-radius:12px;
+
+    text-align:center;
+
+    box-shadow:0 8px 25px rgba(0,0,0,0.1);
+}
+
+
+/* =========================
+USER CIRCLE
+========================= */
+
+.user-circle{
+
+    width:90px;
+    height:90px;
+
+    background-color:#dc3545;
+    color:white;
+
+    font-size:36px;
+    font-weight:600;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin:0 auto 20px auto;
+}
+
+
+/* =========================
+USER INFO
+========================= */
+
+.user-name{
+    font-size:24px;
+    margin-bottom:5px;
+    color:white;
+}
+
+.user-email{
+    color:azure;
+    font-size:15px;
+    margin-bottom:20px;
+}
+
+
+/* =========================
+ADMIN EXTRA INFO
+========================= */
+
+.admin-info{
+    margin-bottom:25px;
+}
+
+.info-row{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:8px;
+    padding:8px 12px;
+    background:rgba(255,255,255,0.1);
+    border-radius:6px;
+}
+
+.label{
+    font-weight:600;
+    color:#f1f1f1;
+}
+
+.value{
+    color:#ffc107;
+    font-weight:500;
+}
+
+
+/* =========================
+BUTTONS
+========================= */
+
+.profile-actions{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.btn-change{
+    background:#ffc107;
+    color:black;
+    padding:10px 16px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:500;
+    transition:all 0.3s ease;
+}
+
+.btn-change:hover{
+    background:#e0a800;
+    transform:translateY(-2px);
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+
+.btn-delete{
+    background:#dc3545;
+    color:#fff;
+    padding:10px 16px;
+    border-radius:6px;
+    text-decoration:none;
+    border:none;
+    font-weight:500;
+    transition:all 0.3s ease;
+    cursor:pointer;
+}
+
+.btn-delete:hover{
+    background:#b02a37;
+    transform:translateY(-2px);
+    box-shadow:0 4px 12px rgba(0,0,0,0.25);
+}
+
+.disabled-btn{
+    background:#ccc;
+    color:#666;
+    padding:10px 16px;
+    border-radius:6px;
+    text-decoration:none;
+    cursor:not-allowed;
+    opacity:0.8;
+}
+
+
+/* =========================
+TABLET
+========================= */
+
+@media(max-width:768px){
+
+    .profile-card{
+        padding:30px;
+    }
+
+    .user-circle{
+        width:80px;
+        height:80px;
+        font-size:30px;
+    }
+
+    .user-name{
+        font-size:22px;
+    }
+
+}
+
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:480px){
+
+    .profile-card{
+        padding:25px;
+    }
+
+    .user-circle{
+        width:70px;
+        height:70px;
+        font-size:26px;
+    }
+
+    .user-name{
+        font-size:20px;
+    }
+
+    .user-email{
+        font-size:14px;
+    }
+
+}

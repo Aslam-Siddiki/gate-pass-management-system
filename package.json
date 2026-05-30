@@ -1,0 +1,36 @@
+{
+  "name": "passify",
+  "version": "1.0.0",
+  "description": "Online gatepass management system",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+
+  "author": "Aslam",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18"
+  },
+
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^6.0.0",
+    "date-holidays": "^3.26.8",
+    "dotenv": "^17.4.2",
+    "ejs": "^3.1.10",
+    "ejs-mate": "^4.0.0",
+    "express": "^4.21.2",
+    "express-session": "^1.19.0",
+    "joi": "^18.2.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.18.0",
+    "node-fetch": "^3.3.2"
+  },
+  
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

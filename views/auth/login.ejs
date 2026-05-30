@@ -1,0 +1,65 @@
+<% layout("/layouts/guestboilerplate") %>
+<% style = '<link rel="stylesheet" href="/css/auth/login.css">' %>
+
+<div class="login-wrapper">
+
+    <div class="login-card">
+
+        <h1 class="login-title">User Login</h1>
+
+        <form action="/auth/login" method="POST" class="login-form needs-validation" novalidate>
+
+            <!-- Email -->
+            <div class="mb-3 text-start">
+                <label for="email" class="form-label">Email Address</label>
+                <input 
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    placeholder="example@rajalakshmi.edu.in"
+                    required
+                >
+                <!-- ✅ was user email -->
+                <div class="valid-feedback">Email seems valid!</div>
+                <div class="invalid-feedback">Please enter a valid email.</div>
+            </div>
+
+            <!-- Password -->
+            <div class="mb-3 text-start">
+                <label for="password" class="form-label">Password</label>
+                <div class="input-group has-validation">
+                    <input 
+                        type="password"
+                        class="form-control"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        required
+                    >
+                    <!-- ✅ was user Password -->
+                    <button
+                        type="button"
+                        class="btn btn-outline-secondary"
+                        onclick="togglePassword()"
+                    >👁</button>
+                    <div class="valid-feedback">Password filled!</div>
+                    <div class="invalid-feedback">Please enter your password.</div>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <button type="submit" class="btn login-btn w-100">
+                Login
+            </button>
+
+        </form>
+
+        <p class="login-footer">
+            Don't have an account?
+            <a href="/auth/register"><b>Register here</b></a>
+        </p>
+
+    </div>
+
+</div>

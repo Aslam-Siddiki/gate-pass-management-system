@@ -1,0 +1,19 @@
+
+/* Body style */
+body{
+    margin:0;
+    font-size:16px;
+    line-height:1.6;
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+
+    padding-top:210px;   /* only this spacing */
+
+    background-image:
+    linear-gradient(rgba(40,80,140,0.15), rgba(220,230,245,0.25)),
+    url("/images/bg.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}

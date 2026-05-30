@@ -1,0 +1,236 @@
+<% layout("/layouts/guestboilerplate") %>
+<% style = '<link rel="stylesheet" href="/css/auth/studentRegistration.css">' %>
+
+<div class="container py-5">
+
+  <div class="row justify-content-center">
+
+    <div class="col-lg-7">
+
+      <div class="card shadow-lg border-0 rounded-4">
+
+        <div class="card-body p-4">
+
+          <h3 class="text-center mb-4 text-purple fw-bold">
+            Create Student Account
+          </h3>
+
+          <form action="/auth/register/student" method="POST" class="needs-validation" novalidate>
+          <!-- ✅ was /student/register -->
+
+            <div class="row">
+
+              <!-- Full Name -->
+              <div class="col-md-6 mb-3">
+                <label for="fullName" class="form-label">Full Name</label>
+                <input 
+                  type="text"
+                  class="form-control"
+                  id="fullName"
+                  name="userName"
+                  placeholder="John Doe"
+                  minlength="3"
+                  maxlength="50"
+                  required
+                > 
+
+                <!-- ✅ was user[userName] -->
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Name must be at least 3 characters.</div>
+              </div>
+
+              <!-- Email -->
+              <div class="col-md-6 mb-3">
+                <label for="email" class="form-label">College Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="example@rajalakshmi.edu.in"
+                  required
+                >
+
+                <!-- ✅ was user[email] -->
+                <div class="valid-feedback">Valid college email!</div>
+                <div class="invalid-feedback">Please use your college email (@rajalakshmi.edu.in).</div>
+              </div>
+
+              <!-- Password -->
+              <div class="col-md-6 mb-3">
+                <label for="password" class="form-label">Password</label>
+                <div class="input-group has-validation">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    name="password"
+                    placeholder="Minimum 6 characters"
+                    minlength="6"
+                    maxlength="128"
+                    required
+                  >
+
+                  <!-- ✅ was user[password] -->
+                  <button 
+                    type="button" 
+                    class="btn btn-outline-secondary" 
+                    onclick="togglePassword()"
+                  >👁</button>
+                  <div class="valid-feedback">Strong password!</div>
+                  <div class="invalid-feedback">Password must be at least 6 characters.</div>
+                </div>
+              </div>
+
+              <!-- Roll Number -->
+              <div class="col-md-6 mb-3">
+                <label for="rollNumber" class="form-label">Roll Number</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="rollNumber"
+                  name="rollNumber"
+                  placeholder="Eg. 240701061"
+                  required
+                >
+
+                <!-- ✅ was user[rollNumber] -->
+                <div class="valid-feedback">Roll number confirmed!</div>
+                <div class="invalid-feedback">Please enter your roll number.</div>
+              </div>
+
+              <!-- Department -->
+              <div class="col-md-6 mb-3">
+                <label for="department" class="form-label">Department</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="department"
+                  name="department"
+                  placeholder="Eg. CSE / IT / ECE"
+                  minlength="2"
+                  maxlength="100"
+                  required
+                >
+
+                <!-- ✅ was user[department] -->
+                <div class="valid-feedback">Department confirmed!</div>
+                <div class="invalid-feedback">Please select your department.</div>
+              </div>
+
+              <!-- Parent Phone -->
+              <div class="col-md-6 mb-3">
+                <label for="parentPhone" class="form-label">Parent Phone</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="parentPhone"
+                  name="parentPhone"
+                  placeholder="Eg. 9876543210"
+                  pattern="[0-9]{10}"
+                  maxlength="10"
+                  required
+                >
+
+                <!-- ✅ was user[parentPhone] -->
+                <div class="valid-feedback">Valid phone number!</div>
+                <div class="invalid-feedback">Please enter a valid 10 digit phone number.</div>
+              </div>
+
+              <!-- Room Number -->
+              <div class="col-md-6 mb-3">
+                <label for="roomNumber" class="form-label">Room Number</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="roomNumber"
+                  name="roomNumber"
+                  placeholder="Eg. 204"
+                  required
+                >
+
+                <!-- ✅ was user[roomNumber] -->
+                <div class="valid-feedback">Room number confirmed!</div>
+                <div class="invalid-feedback">Please enter your room number.</div>
+              </div>
+
+              <!-- Hostel Name -->
+              <div class="col-md-6 mb-3">
+                <label for="hostelName" class="form-label">Hostel Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="hostelName"
+                  name="hostelName"
+                  placeholder="Eg. REC Habitat"
+                  minlength="2"
+                  maxlength="100"
+                  required
+                >
+
+                <!-- ✅ was user[hostelName] -->
+                <div class="valid-feedback">Hostel name confirmed!</div>
+                <div class="invalid-feedback">Please enter your hostel name.</div>
+              </div>
+
+              <!-- Home Location -->
+              <div class="col-md-6 mb-3">
+                <label for="homeLocation" class="form-label">Home Location</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="homeLocation"
+                  name="homeLocation"
+                  placeholder="Eg. Thandalam, Chennai"
+                  minlength="2"
+                  maxlength="200"
+                  required
+                >
+
+                <!-- ✅ was user[homeLocation] -->
+                <div class="valid-feedback">Location confirmed!</div>
+                <div class="invalid-feedback">Please enter your home location.</div>
+              </div>
+
+              <!-- Role -->
+              <div class="col-md-6 mb-3">
+                <label for="role" class="form-label">Role</label>
+                <select
+                  class="form-select"
+                  id="role"
+                  name="role"
+                  required
+                >
+                
+                <!-- ✅ was user[role] -->
+                  <option value="">Select Role</option>
+                  <option value="student">Student</option>
+                </select>
+                <div class="valid-feedback">Role selected!</div>
+                <div class="invalid-feedback">Please select a role.</div>
+              </div>
+
+            </div>
+
+            <!-- Already have account -->
+            <div class="text-center mb-3">
+              <p class="mb-0">Already have an account?
+                <a href="/auth/login" class="login-link">Login here</a>
+              </p>
+            </div>
+
+            <div class="d-grid mt-3">
+              <button class="btn register-btn text-white btn-lg" type="submit">
+                Register
+              </button>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+

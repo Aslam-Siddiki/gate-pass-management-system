@@ -1,0 +1,55 @@
+<% layout("/layouts/adminboilerplate") %>
+<link rel="stylesheet" href="/css/admin/profile.css">
+
+<div class="profile-wrapper">
+
+    <div class="profile-card">
+
+        <!-- Admin Avatar -->
+        <div class="user-circle">
+            <%= admin.userName.charAt(0).toUpperCase() %>
+        </div>
+
+        <!-- Admin Name -->
+        <h2 class="user-name">
+            <%= admin.userName %>
+        </h2>
+
+        <!-- Email -->
+        <p class="user-email">
+            <%= admin.email %>
+        </p>
+
+        <!-- Additional Admin Info -->
+        <div class="admin-info">
+
+            <div class="info-row">
+                <span class="label">Hostel</span>
+                <span class="value"><%= admin.hostelName %></span>
+            </div>
+
+            <div class="info-row">
+                <span class="label">Role</span>
+                <span class="value"><%= admin.role %></span>
+            </div>
+
+        </div>
+
+        <!-- Actions -->
+        <div class="profile-actions">
+
+            <a href="/admin/change-password" class="btn-change">
+                Change Password
+            </a>
+
+            <form action="/admin/delete-account" method="POST">
+                <button class="btn-delete" type="submit">
+                    Delete Account
+                </button>
+            </form>
+
+        </div>
+
+    </div>
+
+</div>

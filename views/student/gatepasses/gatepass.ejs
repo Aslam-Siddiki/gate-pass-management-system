@@ -1,0 +1,128 @@
+<% layout("/layouts/studentboilerplate") %>
+<link rel="stylesheet" href="/css/gatepass/gatepass.css">
+    
+<div class="gatepass-section">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-6 col-md-8 col-sm-10">
+
+                <div class="gatepass-card">
+
+                    <h2 class="text-center mb-4">Apply for Gate Pass</h2>
+
+                    <form action="/gatepass/apply" method="POST" class="needs-validation" novalidate>
+
+                        <!-- Student Name -->
+                        <div class="mb-3">
+                            <label for="studentName" class="form-label text-purple">Student Name</label>
+                            <input 
+                                type="text"
+                                class="form-control border-purple"
+                                id="studentName"
+                                name="name"
+                                value="<%= user.userName %>"
+                                readonly
+                                required
+                            >
+
+                            <div class="invalid-feedback">
+                                Student name cannot be modified.
+                            </div>
+                        </div>
+
+
+                        <!-- Roll Number -->
+                        <div class="mb-3">
+                            <label for="rollNo" class="form-label text-purple">Roll Number</label>
+                            <input 
+                                type="text"
+                                class="form-control border-purple"
+                                id="rollNo"
+                                name="rollNo"
+                                value="<%= user.rollNumber %>"
+                                readonly
+                                required
+                            >
+
+                            <div class="invalid-feedback">
+                                Roll number cannot be modified.
+                            </div>
+                        </div>
+
+
+                        <!-- Reason -->
+                        <div class="mb-3">
+                            <label for="reason" class="form-label text-purple">Reason</label>
+                            <textarea 
+                                class="form-control border-purple"
+                                id="reason"
+                                name="reason"
+                                rows="3"
+                                maxlength="200"
+                                placeholder="Reason for leaving hostel"
+                                required></textarea>
+
+                            <div class="invalid-feedback">
+                                Please enter the reason.
+                            </div>
+                        </div>
+
+
+                        <!-- Dates -->
+                        <div class="row">
+
+                            <div class="col-md-6 mb-3">
+                                <label for="exitDate" class="form-label text-purple">Exit Date</label>
+                                <input 
+                                    type="date"
+                                    class="form-control border-purple"
+                                    id="exitDate"
+                                    name="exitDate"
+                                    required
+                                >
+
+                                <div class="invalid-feedback">
+                                    Please select exit date.
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6 mb-3">
+                                <label for="returnDate" class="form-label text-purple">Return Date</label>
+                                <input 
+                                    type="date"
+                                    class="form-control border-purple"
+                                    id="returnDate"
+                                    name="returnDate"
+                                    required
+                                >
+
+                                <div class="invalid-feedback">
+                                    Please select return date.
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Submit Button -->
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn submit-btn">
+                                Submit Application
+                            </button>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

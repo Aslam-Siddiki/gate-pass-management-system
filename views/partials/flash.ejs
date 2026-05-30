@@ -1,0 +1,23 @@
+<!-- Error Flash Messages -->
+<% if(error && error.length > 0){ %>
+    <div class="flash-container alert alert-danger" role="alert">
+        <div class="flash-body">
+            <% error.forEach(msg => { %>
+                <div>⚠️ <%= msg %></div>
+            <% }) %>
+        </div>
+        <button type="button" class="flash-close btn-close btn-close-white ms-3" aria-label="Close"></button>
+    </div>
+<% } %>
+
+<!-- Success Flash Messages -->
+<% if(success && success.length > 0){ %>
+    <div class="flash-container alert alert-success" role="alert">
+        <div class="flash-body">
+            <% success.forEach(msg => { %>
+                <div>✅ <%= msg %></div>
+            <% }) %>
+        </div>
+        <button type="button" class="flash-close btn-close btn-close-white ms-3" aria-label="Close"></button>
+    </div>
+<% } %>

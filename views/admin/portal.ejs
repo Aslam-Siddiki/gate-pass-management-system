@@ -1,0 +1,103 @@
+<% layout("/layouts/adminboilerplate") %>
+<% style = '<link rel="stylesheet" href="/css/main/index.css">' %>
+
+<div class="main">
+
+    <!-- Page Heading -->
+    <div class="head">
+        <h1>Campus Day Of Today</h1>
+        <h2><%= todayText %></h2>
+    </div>
+
+    <!-- Dashboard -->
+    <div class="dashboard">
+
+        <!-- Calendar -->
+        <div class="calendar-card">
+
+            <table>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+
+                <tr>
+
+                    <% for(let i = 0; i < firstDay; i++){ %>
+                        <td></td>
+                    <% } %>
+
+                    <% days.forEach((day, index) => { %>
+
+                        <% const weekDay = (index + firstDay) % 7; %>
+
+                        <td class="
+                            <%= day === todayDate ? 'today' : '' %>
+                            <%= weekDay === 0 ? 'sunday' : '' %>
+                            <%= weekDay === 1 ? 'monday' : '' %>
+                        ">
+                            <%= day %>
+                        </td>
+
+                        <% if((index + firstDay + 1) % 7 === 0){ %>
+                            </tr><tr>
+                        <% } %>
+
+                    <% }) %>
+
+                </tr>
+
+            </table>
+
+            <!-- Legend -->
+            <div id="legend">
+                <div class="legend-item">
+                    <span class="legend-box public"></span>
+                    Public Holiday
+                </div>
+
+                <div class="legend-item">
+                    <span class="legend-box cse"></span>
+                    CSE Holiday
+                </div>
+
+                <div class="legend-item">
+                    <span class="legend-box today-box"></span>
+                    Today
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Side Panel -->
+        <div class="side-panel">
+
+            <div class="card">
+                <h3>📅 Upcoming Events</h3>
+                <ul>
+                    <li>Internship Review – February 15</li>
+                    <li>CAT 1 Exam – February 27</li>
+                    <li>Recharge Fest – March 28</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>📢 Important Notices</h3>
+                <ul>
+                    <li>No Gatepass This Week</li>
+                    <li>Third Semester Results – To Be Announced Soon</li>
+                    <li>ID Card Compulsory Inside Campus</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

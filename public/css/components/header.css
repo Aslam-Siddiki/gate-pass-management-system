@@ -1,0 +1,76 @@
+/* ========================= */
+/* COLLEGE HEADER */
+/* ========================= */
+
+.college-header{
+    width:100%;
+    background:#f5f5f5;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:15px 0;
+  
+    position:fixed;
+    top:80px;
+    left:0;
+    z-index:998;
+
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* layout */
+
+.college-header-content{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+/* logo */
+
+.college-logo{
+    height:100px;
+}
+
+/* text container */
+
+.college-title{
+    display:flex;
+    flex-direction:column;
+    line-height:25px;
+}
+
+/* text lines */
+
+.title-line1,
+.title-line2{
+    color:#7b1fa2;   /* purple */
+    font-weight:800;
+    font-size:22px;
+}
+
+.title-line3{
+    color:#7b1fa2;
+    font-weight:800;
+    font-size:22px;
+    text-align:center;   /* center COLLEGE */
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (max-width:768px){
+
+    .college-logo{
+        height:45px;
+    }
+
+    .title-line1,
+    .title-line2,
+    .title-line3{
+        font-size:18px;
+    }
+
+}

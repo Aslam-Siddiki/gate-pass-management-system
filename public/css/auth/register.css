@@ -1,0 +1,131 @@
+/* ========================= */
+/* PAGE WRAPPER */
+/* ========================= */
+
+.register-wrapper{
+    min-height:60vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+}
+
+
+/* ========================= */
+/* CARD */
+/* ========================= */
+
+.register-card{
+    background:rgba(255,255,255,0.9);
+    backdrop-filter:blur(10px);
+
+    padding:40px;
+    border-radius:18px;
+
+    width:100%;
+    max-width:420px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.25);
+}
+
+
+/* ========================= */
+/* TITLE */
+/* ========================= */
+
+.register-title{
+    color:#7b1fa2;
+    font-size:32px;
+    font-weight:800;
+    margin-bottom:10px;
+}
+
+.register-subtitle{
+    color:#555;
+    margin-bottom:30px;
+}
+
+
+/* ========================= */
+/* BUTTON AREA */
+/* ========================= */
+
+.register-buttons{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+
+/* ========================= */
+/* BUTTON STYLE */
+/* ========================= */
+
+.role-btn{
+    display:block;
+    padding:14px 20px;
+    font-size:18px;
+    font-weight:700;
+    text-decoration:none;
+    border-radius:10px;
+    transition:0.3s;
+    color:white;
+}
+
+
+/* Student Button */
+
+.student-btn{
+    background:#6a0dad;
+}
+
+.student-btn:hover{
+    background:#4a0678;
+    transform:translateY(-3px);
+}
+
+
+/* Admin Button */
+
+.admin-btn{
+    background:#ff7043;
+}
+
+.admin-btn:hover{
+    background:#e64a19;
+    transform:translateY(-3px);
+}
+
+
+/* ========================= */
+/* OR DIVIDER */
+/* ========================= */
+
+.divider{
+    font-weight:700;
+    color:#777;
+}
+
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width:768px){
+
+    .register-card{
+        padding:30px 20px;
+    }
+
+    .register-title{
+        font-size:26px;
+    }
+
+    .role-btn{
+        font-size:16px;
+    }
+
+}

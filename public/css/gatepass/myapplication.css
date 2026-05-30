@@ -1,0 +1,105 @@
+.application-section{
+    margin-top:40px;
+    padding-bottom:40px;
+}
+
+.application-title{
+    text-align:center;
+    font-weight:700;
+    margin-bottom:30px;
+    color:#6f42c1;
+}
+
+/* CARD */
+.application-card{
+
+    background-color: #6f42c1;
+    backdrop-filter:blur(10px);
+
+    border-radius:14px;
+
+    padding:22px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    height:100%;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+
+/* HEADER */
+
+.card-header{
+    border-bottom:1px solid #eee;
+    padding-bottom:10px;
+    margin-bottom:10px;
+    /* text-align: center; */
+}
+
+.card-header h5{
+    margin:0;
+    font-weight:700;
+    color: azure;
+}
+
+.roll{
+    font-size:14px; 
+    color:azure;
+}
+
+
+/* BODY */
+
+.info{
+    margin-bottom:10px;
+}
+
+.label{
+    font-size:13px;
+    font-weight:600;
+    color: azure;
+}
+
+.info p{
+    margin:2px 0;
+    color: rgb(9, 218, 218);
+}
+
+
+/* STATUS */
+
+.status{
+    display:inline-block;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.pending{
+    background:#fff3cd;
+    color:#856404;
+}
+
+.approved{
+    background:#d4edda;
+    color:#155724;
+}
+
+.rejected{
+    background:#f8d7da;
+    color:#721c24;
+}
+
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+    .application-card{
+        padding:18px;
+    }
+
+}

@@ -1,0 +1,25 @@
+<% layout("/layouts/studentboilerplate") %>
+<link rel="stylesheet" href="/css/student/profile.css">
+
+<div class="profile-wrapper">
+
+    <div class="profile-card">
+
+        <div class="user-circle">
+            <%= user.userName.charAt(0).toUpperCase() %>
+        </div>
+
+        <h2 class="user-name"><%= user.userName %></h2>
+        <p class="user-email"><%= user.email %></p>
+
+        <div class="profile-actions">
+            <a href="/student/change-password" class="btn-change">Update Password</a>
+
+            <form action="/student/delete-account" method="POST">
+                <button class="btn-delete" type="submit">Delete Account</button>
+            </form>
+        </div>
+
+    </div>
+
+</div>

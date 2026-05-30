@@ -1,0 +1,72 @@
+<% layout("/layouts/studentboilerplate") %>
+<link rel="stylesheet" href="/css/gatepass/myapplication.css">
+
+<div class="container application-section">
+
+    <h2 class="application-title">My Gate Pass Applications</h2>
+
+    <div class="row g-4">
+
+        <% if(!passes || passes.length === 0){ %>
+
+            <div class="col-12 text-center">
+                <p class="text-muted">No gate pass applications found.</p>
+            </div>
+
+        <% } %>
+
+        <% passes.forEach(pass => { %>
+
+            <div class="col-lg-4 col-md-6 col-12">
+
+                <div class="application-card">
+
+                    <div class="card-header">
+                        <h5> <%= pass.user.userName %></h5>
+                        <span class="roll"><%= pass.user.rollNumber %></span>
+                    </div>
+
+                    <div class="card-body">
+
+                        <div class="info">
+                            <span class="label">Reason For Leave</span>
+                            <p><%= pass.reason %></p>
+                        </div>
+
+                        <div class="info">
+                            <span class="label">Expected Exit Date</span>
+                            <p><%= pass.exitDate ? pass.exitDate.toISOString().split("T")[0] : "-" %></p>
+                        </div>
+
+                        <div class="info">
+                            <span class="label">Expected Return Date</span>
+                            <p><%= pass.returnDate ? pass.returnDate.toISOString().split("T")[0] : "-" %></p>
+                        </div>
+
+                    </div>
+
+                    <div class="card-footer">
+
+                        <% if(pass.status === "Pending"){ %>
+                            <span class="status pending">Status : Pending</span>
+                        <% } %>
+
+                        <% if(pass.status === "Approved"){ %>
+                            <span class="status approved">Status : Approved</span>
+                        <% } %>
+
+                        <% if(pass.status === "Rejected"){ %>
+                            <span class="status rejected">Status : Rejected</span>
+                        <% } %>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        <% }) %>
+
+    </div>
+
+</div>

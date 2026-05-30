@@ -1,0 +1,138 @@
+/* ========================= */
+/* PAGE SECTION */
+/* ========================= */
+
+.gatepass-section{
+    margin-top:40px;
+    padding-bottom:40px;
+}
+
+
+/* ========================= */
+/* FORM CARD */
+/* ========================= */
+
+.gatepass-card{
+    padding:40px;
+    border-radius:16px;
+    background:rgba(255,255,255,0.9);
+    backdrop-filter:blur(8px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+
+/* ========================= */
+/* TITLE */
+/* ========================= */
+
+.gatepass-card h2{
+    font-weight:700;
+    color:#6a0dad;
+}
+
+
+/* ========================= */
+/* LABEL */
+/* ========================= */
+
+.form-label{
+    color:#6a0dad;
+    font-weight:600;
+}
+
+
+/* ========================= */
+/* INPUT STYLE */
+/* ========================= */
+
+.form-control{
+    border-radius:8px;
+    padding:10px;
+    border:1px solid #6a0dad;
+    transition:all 0.2s ease-in-out;
+}
+
+/* ========================= */
+/* INPUT FOCUS */
+/* ========================= */
+
+.form-control:focus{
+    border-color:#6a0dad;
+    box-shadow:0 0 0 .25rem rgba(106,13,173,.25);
+}
+
+.form-control:hover{
+    border-color:#6a0dad;
+    box-shadow:0 0 0 .25rem rgba(106,13,173,.25);
+}
+
+textarea.form-control:focus{
+    border-color:#6a0dad;
+    box-shadow:0 0 0 .25rem rgba(106,13,173,.25);
+}
+
+textarea.form-control:hover{
+    border-color:#6a0dad;
+    box-shadow:0 0 0 .25rem rgba(106,13,173,.25);
+}
+
+input.form-control:focus{
+    border-color:#6a0dad;
+    box-shadow:0 0 0 .25rem rgba(106,13,173,.25);
+}
+
+input.form-control:hover{
+    border-color:#6a0dad;
+    box-shadow:0 0 0 .25rem rgba(106,13,173,.25);
+}
+
+/* ========================= */
+/* PLACEHOLDER */
+/* ========================= */
+
+.form-control::placeholder{
+    font-size:0.9rem;
+    opacity:0.7;
+}
+
+
+/* ========================= */
+/* INVALID FEEDBACK */
+/* ========================= */
+
+.invalid-feedback{
+    font-size:0.9rem;
+}
+
+
+/* ========================= */
+/* BUTTON */
+/* ========================= */
+
+.submit-btn{
+    background:#6a0dad;
+    border:none;
+    color:white;
+    padding:10px 30px;
+    font-weight:600;
+    border-radius:8px;
+    transition:all 0.2s ease-in-out;
+}
+
+.submit-btn:hover{
+    background:#4d0a86;
+    color: white !important;
+}
+
+
+/* ========================= */
+/* MOBILE RESPONSIVE */
+/* ========================= */
+
+@media (max-width:768px){
+
+    .gatepass-card{
+        padding:25px;
+    }
+
+}

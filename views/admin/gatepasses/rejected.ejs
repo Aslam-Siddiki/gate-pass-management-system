@@ -1,0 +1,82 @@
+<% layout("/layouts/adminboilerplate") %>
+<link rel="stylesheet" href="/css/admin/gatepassCards.css">
+
+<div class="container application-section">
+
+    <h2 class="application-title">Rejected Gate Pass Applications</h2>
+
+    <div class="row g-4">
+
+        <% if(!passes || passes.length === 0){ %>
+
+            <div class="no-data-message">
+                ⚠ No Rejected Gate Pass Applications Found.
+            </div>
+
+        <% } %>
+
+
+        <% passes.forEach(pass => { %>
+
+        <div class="col-lg-4 col-md-6 col-12">
+
+            <div class="application-card">
+
+                <!-- Header -->
+
+                <div class="card-header">
+
+                    <h5><%= pass.user.userName %></h5>
+
+                    <span class="roll">
+                        Roll : <%= pass.user.rollNumber %>
+                    </span>
+
+                </div>
+
+
+                <!-- Body -->
+
+                <div class="card-body">
+
+                    <div class="info">
+                        <span class="label">Reason For Leave</span>
+                        <p><%= pass.reason %></p>
+                    </div>
+
+                    <div class="info">
+                        <span class="label">Exit Date</span>
+                        <p>
+                            <%= pass.exitDate ? pass.exitDate.toISOString().split("T")[0] : "-" %>
+                        </p>
+                    </div>
+
+                    <div class="info">
+                        <span class="label">Return Date</span>
+                        <p>
+                            <%= pass.returnDate ? pass.returnDate.toISOString().split("T")[0] : "-" %>
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- Footer -->
+
+                <div class="card-footer">
+
+                    <span class="status rejected">
+                        Status : Rejected
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <% }) %>
+
+    </div>
+
+</div>

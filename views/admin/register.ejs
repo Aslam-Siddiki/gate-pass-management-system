@@ -1,0 +1,137 @@
+<% layout("/layouts/guestboilerplate") %>
+<% style = '<link rel="stylesheet" href="/css/auth/adminRegistration.css">' %>
+
+<div class="admin-wrapper">
+
+    <div class="admin-card">
+
+        <h1 class="admin-title text-center mb-4">Admin Registration</h1>
+
+        <form action="/auth/register/admin" method="POST" class="row g-3 needs-validation" novalidate>
+
+            <!-- Admin Name -->
+            <div class="col-md-6">
+                <label for="name" class="form-label">Admin Name</label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    id="name"   
+                    name="userName"
+                    required
+                    minlength="3"
+                    maxlength="50"
+                    placeholder="John Doe"
+                >
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Name must be at least 3 characters.
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div class="col-md-6">
+                <label for="email" class="form-label">College Email</label>
+                <input 
+                    type="email" 
+                    class="form-control" 
+                    id="email"
+                    name="email" 
+                    required
+                    placeholder="example@rajalakshmi.edu.in"
+                >
+                <div class="valid-feedback">
+                    Valid email!
+                </div>
+                <div class="invalid-feedback">
+                    Please enter a valid email address.
+                </div>
+            </div>
+
+            <!-- Password -->
+            <div class="col-md-6 mb-3">
+                <label for="password" class="form-label">Password</label>
+                <div class="input-group has-validation">
+                    <input
+                        type="password"
+                        class="form-control"
+                        id="password"
+                        name="password"
+                        placeholder="Min8 char with a-z,0-9,@#$"
+                        minlength="8"
+                        maxlength="128"
+                        required
+                    >
+                    <button type="button" class="btn btn-outline-secondary" onclick="togglePassword()">
+                        👁
+                    </button>
+                    <div class="valid-feedback">
+                        Strong password!
+                    </div>
+                    <div class="invalid-feedback">
+                        Password must be at least 8 characters with uppercase, lowercase, number and special character.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hostel -->
+            <div class="col-md-6">
+                <label for="hostel" class="form-label">Hostel Name</label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    id="hostel"
+                    name="hostelName" 
+                    required
+                    minlength="2"
+                    maxlength="100"
+                    placeholder="eg. REC Habitat"
+                >
+                <div class="valid-feedback">
+                    Hostel name confirmed!
+                </div>
+                <div class="invalid-feedback">
+                    Please enter your hostel name.
+                </div>
+            </div>
+
+            <!-- Role -->
+            <div class="col-md-6">
+                <label for="role" class="form-label">Role</label>
+                <select 
+                    class="form-select" 
+                    id="role" 
+                    name="role" 
+                    required
+                >
+                    <option value="">Select Role</option>
+                    <option value="admin">Admin</option>
+                </select>
+                <div class="valid-feedback">
+                    Role selected!
+                </div>
+                <div class="invalid-feedback">
+                    Please select a role.
+                </div>
+            </div>
+
+            <!-- Already have account -->
+            <div class="col-12 text-center">
+                <p class="mb-0">Already have an account? 
+                    <a href="/auth/login" class="login-link">Login here</a>
+                </p>
+            </div>
+
+            <!-- Button -->
+            <div class="col-12">
+                <button class="btn register-btn w-100" type="submit">
+                    Register
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>

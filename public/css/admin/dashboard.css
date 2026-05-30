@@ -1,0 +1,116 @@
+/* =========================
+   DASHBOARD STATS
+========================= */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin: 40px auto;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.stat-card {
+    background: #6f42c1;
+    border-radius: 14px;
+    padding: 32px 24px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(111, 66, 193, 0.3);
+    transition: all 0.2s ease;
+    cursor: default;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(111, 66, 193, 0.4);
+}
+
+.stat-card h3 {
+    font-size: 52px;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 8px 0;
+    line-height: 1;
+}
+
+.stat-card p {
+    font-size: 16px;
+    font-weight: 600;
+    color: azure;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   CARD VARIANTS
+========================= */
+
+.stat-card:nth-child(1) {
+    background: #856404;
+    box-shadow: 0 10px 25px rgba(133, 100, 4, 0.3);
+}
+
+.stat-card:nth-child(1):hover {
+    box-shadow: 0 15px 30px rgba(133, 100, 4, 0.4);
+}
+
+.stat-card:nth-child(2) {
+    background: #155724;
+    box-shadow: 0 10px 25px rgba(21, 87, 36, 0.3);
+}
+
+.stat-card:nth-child(2):hover {
+    box-shadow: 0 15px 30px rgba(21, 87, 36, 0.4);
+}
+
+.stat-card:nth-child(3) {
+    background: #721c24;
+    box-shadow: 0 10px 25px rgba(114, 28, 36, 0.3);
+}
+
+.stat-card:nth-child(3):hover {
+    box-shadow: 0 15px 30px rgba(114, 28, 36, 0.4);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+    .stats {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+
+    .stat-card h3 {
+        font-size: 42px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+    .stats {
+        padding: 0 12px;
+        gap: 16px;
+    }
+
+    .stat-card {
+        padding: 24px 16px;
+    }
+
+    .stat-card h3 {
+        font-size: 36px;
+    }
+
+    .stat-card p {
+        font-size: 14px;
+    }
+}
